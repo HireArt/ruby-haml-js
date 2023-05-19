@@ -6,8 +6,8 @@ module RubyHamlJs
       require 'tilt_processor'
       require 'ruby-haml-js/template'
 
-      app.assets.register_mime_type 'application/javascript', extensions: ['.hamljs', '.jst.hamljs'], charset: :default
-      app.assets.register_preprocessor 'application/javascript', TiltProcessor.new(::RubyHamlJs::Template)
+      app.assets.register_mime_type 'text/hamljs', extensions: ['.hamljs', '.jst.hamljs'], charset: :default
+      app.assets.register_transformer 'text/hamljs', 'application/javascript+function', TiltProcessor.new(::RubyHamlJs::Template)
     end
   end
 end
