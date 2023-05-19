@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "ruby-haml-js"
 
-  s.add_dependency             'sprockets', '>= 2.0.0'
+  s.add_dependency             'sprockets', '>= 2.0.0', '< 4'
   s.add_dependency             'execjs'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rails', '>= 3.1.1'
