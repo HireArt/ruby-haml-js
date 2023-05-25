@@ -40,7 +40,6 @@ module RubyHamlJs
     def js_string str
       (str || '').
         gsub("'")  {|m| "\\'" }.
-        gsub("\r") {|m| "\\r" }.
         gsub("\n") {|m| "\\n" }
     end
 
