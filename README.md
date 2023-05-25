@@ -2,6 +2,16 @@
 
 Precompiles the HAML-JS templates into a function.
 
+# Compatibility
+
+This gem is compatible with Sprocket 2 and 3 only.
+
+Due to changes in the transformer/processor interface of Sprockets 4, Tilt (this gem relies on the Tilt::Template class) can't work with Sprockets 4 as expected anymore.
+
+Reference: [Tilt's issue.](https://github.com/rtomayko/tilt/issues/292#issuecomment-236549078)
+
+# How to use
+
 This can be used as a standalone template or as part of Rails 3.1 assets pipeline.
 
 For example, if you have a file `app/assets/javascripts/templates/comment.jst.hamljs` with the following content:
